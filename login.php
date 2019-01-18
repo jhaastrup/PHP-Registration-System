@@ -19,7 +19,7 @@
 	</div>
 	
 	<form method="post" action="login.php">
-
+     <!--Import errors.php to handle any error on the login page --->
 		<?php include('errors.php'); ?>
 
 		<div class="form-group">
