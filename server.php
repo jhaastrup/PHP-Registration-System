@@ -1,5 +1,6 @@
-<?php 
-	session_start();
+<?php  
+
+	session_start(); //using sessions
 
 	// variable declaration 
 	$fullname = "";
@@ -10,10 +11,10 @@
 	
 
 
-	// connect to database
+	// connecting to the database 
 	$db = mysqli_connect('localhost', 'nextdrea_dream', 'nextdream12345', 'nextdrea_registration');
 
-	// REGISTER USER
+	// REGISTERING THE  USER
 	if (isset($_POST['reg_user'])) {
 		// receive all input values from the form 
 		$fullname = mysqli_real_escape_string($db, $_POST['fullname']);
@@ -36,8 +37,8 @@
 		if (empty($password_1)) {
 			 array_push($errors, "Password is required"); 
 			}
-
-		if ($password_1 != $password_2) {
+              
+		if ($password_1 != $password_2) { 
 
 			array_push($errors, "The two passwords do not match");
 		}
