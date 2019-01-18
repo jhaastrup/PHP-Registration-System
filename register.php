@@ -18,11 +18,13 @@
 	</div>
 	
 	<form method="post" action="register.php">
-
+<!-- Import errors.php to handle any error while filling the form-->
 		<?php include('errors.php'); ?> 
-
+           
+		   <!--Using boostrap form-group class to make my entire form responsive on phone-->
 		<div class="form-group">
-			<label>Fullname</label>
+			<label>Fullname</label>  
+			<!--Using form-control class for the make text feilds responsive on mobile---->
 			<input type="text" name="fullname" class = "form-control" value="<?php echo $fullname; ?>">
 		</div>
 
