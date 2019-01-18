@@ -55,7 +55,7 @@
 			//send users their login details.
 			mail($email,$subject,$message,$headers);
 			
-			$password = md5($password_1);//encrypt the password before saving in the database
+			$password = md5($password_1);//encrypting the password before saving in the database
 			$query = "INSERT INTO users (fullname, username, email, password) 
 					  VALUES('$fullname', '$username', '$email', '$password')";
 			mysqli_query($db, $query);  
