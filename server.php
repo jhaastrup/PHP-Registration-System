@@ -37,7 +37,7 @@
 		if (empty($password_1)) {
 			 array_push($errors, "Password is required"); 
 			}
-              
+             //check if both passwords are the same else kick this fraud out. 
 		if ($password_1 != $password_2) { 
 
 			array_push($errors, "The two passwords do not match");
